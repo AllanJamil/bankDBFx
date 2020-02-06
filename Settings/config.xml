@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+  <comment>Here are some favorites</comment>
+  <entry key="connection">jdbc:mysql://35.228.141.105:3306/SuperGruppen</entry>
+  <entry key="user">supergruppen</entry>
+  <entry key="password">wilhelm123</entry>
+</properties>
+

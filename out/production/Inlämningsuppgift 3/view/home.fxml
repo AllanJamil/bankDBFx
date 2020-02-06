@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1200.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.HomeController">
+  <tabs>
+    <Tab text="Customer">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="cCustomerTable" layoutX="279.0" layoutY="85.0" prefHeight="322.0" prefWidth="346.0">
+                    <columns>
+                      <TableColumn fx:id="cFirstnameCol" prefWidth="175.0" text="Firstname" />
+                      <TableColumn fx:id="cLastnameCol" prefWidth="170.0" text="Lastname" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="279.0" layoutY="54.0" text="Customers">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="758.0" layoutY="111.0" mnemonicParsing="false" onAction="#addCustomerButtonAction" prefHeight="33.0" prefWidth="163.0" text="Add">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="758.0" layoutY="230.0" mnemonicParsing="false" onAction="#deleteCustomerButtonAction" prefHeight="33.0" prefWidth="163.0" text="Delete">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="editCustomerButton" layoutX="758.0" layoutY="340.0" mnemonicParsing="false" onAction="#editCustomerButtonAction" prefHeight="33.0" prefWidth="163.0" text="Edit">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab onSelectionChanged="#onAccountClicked" text="Account">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="aCustomerTable" layoutX="35.0" layoutY="66.0" prefHeight="206.0" prefWidth="291.0">
+                    <columns>
+                      <TableColumn fx:id="aFirstnameCol" prefWidth="151.0" text="Firstname" />
+                      <TableColumn fx:id="aLastnameCol" prefWidth="139.0" text="Lastname" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="35.0" layoutY="35.0" prefHeight="26.0" prefWidth="106.0" text="Customers">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="442.0" layoutY="35.0" prefHeight="26.0" prefWidth="106.0" text="Accounts">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="aAccountTable" layoutX="439.0" layoutY="67.0" prefHeight="206.0" prefWidth="291.0">
+                    <columns>
+                      <TableColumn fx:id="aBalanceCol" prefWidth="146.0" text="Balance" />
+                      <TableColumn fx:id="aInterestRateCol" prefWidth="148.0" text="Interest Rate" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="updateAccountButton" layoutX="640.0" layoutY="324.0" mnemonicParsing="false" onAction="#editAccountButtonAction" prefHeight="31.0" prefWidth="145.0" text="Update Interest Rate">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="addAccountButton" layoutX="88.0" layoutY="324.0" mnemonicParsing="false" onAction="#addAccountButtonAction" prefHeight="31.0" prefWidth="145.0" text="Add Account">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="366.0" layoutY="324.0" mnemonicParsing="false" onAction="#deleteAccountAction" prefHeight="31.0" prefWidth="145.0" text="Delete Account">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="withdrawButton" layoutX="88.0" layoutY="388.0" mnemonicParsing="false" onAction="#WithdrawButtonAction" prefHeight="31.0" prefWidth="145.0" text="Withdraw">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="depositButton" layoutX="366.0" layoutY="388.0" mnemonicParsing="false" onAction="#depositButtonAction" prefHeight="31.0" prefWidth="145.0" text="Deposit">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="GetAccountButton" alignment="CENTER" layoutX="339.0" layoutY="154.0" mnemonicParsing="false" onAction="#addAccountsToAccountTable" prefHeight="54.0" prefWidth="89.0" text="Get&#10;Account" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <TableView fx:id="loanTable" layoutX="838.0" layoutY="67.0" prefHeight="206.0" prefWidth="327.0">
+                     <columns>
+                        <TableColumn fx:id="loanBalanceCol" prefWidth="98.0" text="Balance" />
+                        <TableColumn fx:id="loanInterestRateCol" prefWidth="103.0" text="Interest Rate" />
+                        <TableColumn fx:id="loanPaymentIntervalCol" prefWidth="125.0" text="Payment interval" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="838.0" layoutY="35.0" prefHeight="31.0" prefWidth="115.0" text="Loans">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="getLoanButton" alignment="CENTER" layoutX="741.0" layoutY="154.0" mnemonicParsing="false" onAction="#addLoansToLoanTable" prefHeight="54.0" prefWidth="89.0" text="Get&#10;Loan" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="929.0" layoutY="324.0" mnemonicParsing="false" onAction="#addLoanButtonAction" prefHeight="31.0" prefWidth="145.0" text="Add Loan">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="929.0" layoutY="388.0" mnemonicParsing="false" onAction="#editLoanButtonAction" prefHeight="31.0" prefWidth="145.0" text="Edit Loan">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="640.0" layoutY="388.0" mnemonicParsing="false" onAction="#showPaymentPlanButtonAction" prefHeight="31.0" prefWidth="145.0" text="Show Payment Plan">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab onSelectionChanged="#onHistoryClicked" text="History">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="hCustomerTable" layoutX="167.0" layoutY="73.0" prefHeight="206.0" prefWidth="291.0">
+                    <columns>
+                      <TableColumn fx:id="hFirstnameCol" prefWidth="147.0" text="Firstname" />
+                      <TableColumn fx:id="hLastnameCol" prefWidth="143.0" text="Lastname" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="167.0" layoutY="42.0" text="Customers">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="hAccountTable" layoutX="735.0" layoutY="73.0" prefHeight="206.0" prefWidth="291.0">
+                    <columns>
+                      <TableColumn fx:id="hBalanceCol" prefWidth="143.0" text="Balance" />
+                      <TableColumn fx:id="hInterestRateCol" prefWidth="147.0" text="Interest Rate" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="735.0" layoutY="42.0" text="Accounts">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="245.0" layoutY="331.0" text="From:">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="472.0" layoutY="331.0" text="To:">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="447.0" layoutY="341.0" text="-">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="721.0" layoutY="324.0" mnemonicParsing="false" onAction="#showHistoryButtonAction" prefHeight="80.0" prefWidth="171.0" text="Show History">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="CENTER" layoutX="546.0" layoutY="148.0" mnemonicParsing="false" onAction="#addAccountsTohAccountTable" prefHeight="70.0" prefWidth="94.0" text="Get&#10;Accounts" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="dateFromTextField" layoutX="245.0" layoutY="355.0" />
+                  <TextField fx:id="dateToTextField" layoutX="472.0" layoutY="355.0" />
+               </children></AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>

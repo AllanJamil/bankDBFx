@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="350.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.PaymentPlanController">
+   <children>
+      <Label fx:id="infoLabel" alignment="TOP_CENTER" layoutX="97.0" layoutY="71.0" prefHeight="205.0" prefWidth="206.0" text="Payment Plan INFO&#10;INFO&#10;INFO&#10;INFO" />
+      <Label alignment="CENTER" layoutX="110.0" layoutY="14.0" prefHeight="42.0" prefWidth="180.0" text="Payment Plan" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="okButton" layoutX="140.0" layoutY="281.0" mnemonicParsing="false" onAction="#close" prefHeight="20.0" prefWidth="120.0" text="OK">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

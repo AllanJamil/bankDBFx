@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="250.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.AddCustomerController">
+   <children>
+      <TextField fx:id="pinTextField" layoutX="19.0" layoutY="176.0" promptText="PIN (####)" />
+      <TextField fx:id="lastnameTextField" layoutX="19.0" layoutY="110.0" promptText="Lastname" />
+      <TextField fx:id="firstnameTextField" layoutX="19.0" layoutY="39.0" promptText="Firstname" />
+      <Button fx:id="cancelButton" layoutX="241.0" layoutY="139.0" mnemonicParsing="false" onAction="#cancelButtonAction" prefHeight="73.0" prefWidth="141.0" text="Cancel">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="okButton" layoutX="241.0" layoutY="39.0" mnemonicParsing="false" onAction="#okButtonAction" prefHeight="73.0" prefWidth="141.0" text="OK">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

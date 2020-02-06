@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="250.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.editAddLoanController">
+   <children>
+      <TextField fx:id="balanceTextField" layoutX="23.0" layoutY="50.0" promptText="Balance" />
+      <TextField fx:id="interestRateTextField" layoutX="23.0" layoutY="111.0" promptText="Interest Rate" />
+      <TextField fx:id="paymentIntervalTextField" layoutX="23.0" layoutY="170.0" promptText="Payment Interval" />
+      <Button fx:id="okButton" layoutX="237.0" layoutY="39.0" mnemonicParsing="false" onAction="#okButtonAction" prefHeight="73.0" prefWidth="141.0" text="OK">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="cancelButton" layoutX="237.0" layoutY="139.0" mnemonicParsing="false" onAction="#close" prefHeight="73.0" prefWidth="141.0" text="Cancel">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

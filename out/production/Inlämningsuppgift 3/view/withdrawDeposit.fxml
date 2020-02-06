@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="250.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.WithdrawDepositController">
+   <children>
+      <TextField fx:id="amountTextField" layoutX="68.0" layoutY="67.0" prefHeight="42.0" prefWidth="264.0" promptText="Amount" />
+      <Button fx:id="withdrawDepositButton" layoutX="68.0" layoutY="153.0" mnemonicParsing="false" onAction="#okButtonAction" prefHeight="49.0" prefWidth="108.0" text="OK">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="cancelButton" layoutX="224.0" layoutY="153.0" mnemonicParsing="false" onAction="#close" prefHeight="49.0" prefWidth="108.0" text="Cancel">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
